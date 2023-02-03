@@ -55,8 +55,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414755108781187534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.011, y: -0.026, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.010999998, y: -0.026, z: 0}
+  m_LocalScale: {x: 0.09999999, y: 0.09999999, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1414755108962304323}
@@ -71,10 +71,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1414755108962304323}
+  - component: {fileID: 1414755108962304326}
   - component: {fileID: 1414755108962304322}
   - component: {fileID: 1414755108962304324}
   - component: {fileID: 1414755108962304325}
-  - component: {fileID: 1414755108962304326}
   - component: {fileID: 1414755108962304327}
   m_Layer: 0
   m_Name: Warrior
@@ -101,6 +101,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414755108962304326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414755108962304321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4aef94dc5b19740900a740d9a55ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadDeMovimiento: 600
+  sueavizadoDeMovimiento: 0.3
+  NumScene: 0
+  fuerzaDeSalto: 400
+  queEsSuelo:
+    serializedVersion: 2
+    m_Bits: 64
+  Pinchos:
+    serializedVersion: 2
+    m_Bits: 0
+  controladorSuelo: {fileID: 1414755108529103224}
+  "controladorDa\xF1o": {fileID: 0}
+  dimensionesCaja: {x: 0.75, y: 0.25, z: 0}
+  "dimensionesCajaDa\xF1o": {x: 0, y: 0, z: 0}
+  enSuelo: 0
+  enPinchos: 0
+  controladorPared: {fileID: 1414755108781187535}
+  dimensionesCajaPared: {x: 0.5, y: 2, z: 0}
+  velocidadDeslizar: 2
+  fuerzaSaltoParedX: 10
+  fuerzaSaltoParedY: 600
+  tiempoSaltoPared: 0
+  velocidadDash: 2
+  tiempoDash: 0.045
+  trailRenderer: {fileID: 1414755109437511204}
 --- !u!212 &1414755108962304322
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -200,36 +237,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1414755108962304326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414755108962304321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e4aef94dc5b19740900a740d9a55ac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadDeMovimiento: 600
-  sueavizadoDeMovimiento: 0.3
-  fuerzaDeSalto: 400
-  queEsSuelo:
-    serializedVersion: 2
-    m_Bits: 64
-  controladorSuelo: {fileID: 1414755108529103224}
-  dimensionesCaja: {x: 0.75, y: 0.25, z: 0}
-  enSuelo: 0
-  controladorPared: {fileID: 1414755108781187535}
-  dimensionesCajaPared: {x: 0.5, y: 2, z: 0}
-  velocidadDeslizar: 2
-  fuerzaSaltoParedX: 10
-  fuerzaSaltoParedY: 600
-  tiempoSaltoPared: 0
-  velocidadDash: 2
-  tiempoDash: 0.045
-  trailRenderer: {fileID: 1414755109437511204}
 --- !u!95 &1414755108962304327
 Animator:
   serializedVersion: 4
