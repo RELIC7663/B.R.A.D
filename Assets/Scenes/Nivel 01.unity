@@ -167,8 +167,6 @@ MonoBehaviour:
   effectsMixer: {fileID: 24100000, guid: 269b5f7a4a489484bb05535bf061c714, type: 2}
   BGmusic: {fileID: 1125096865}
   dead: {fileID: 842388387}
-  masterVol: 0
-  effectsVol: 0
   masterSlider: {fileID: 1089665322}
   effectsSlder: {fileID: 63551007}
 --- !u!4 &124365188

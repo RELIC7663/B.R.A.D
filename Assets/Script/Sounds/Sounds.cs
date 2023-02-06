@@ -23,6 +23,8 @@ public class Sounds : MonoBehaviour
     }
     void Start()
     {
+        masterVol=SaveSound.masterVol;
+        effectsVol=SaveSound.effectsVol;
         PlayAudio(BGmusic);
         
 
@@ -37,7 +39,6 @@ public class Sounds : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         EffectsVolume();
@@ -46,13 +47,15 @@ public class Sounds : MonoBehaviour
 
     public void MasterVolume()
     {
+        SaveSound.SonidoMaste(masterSlider.value);
         MusicMixer.SetFloat("MasterMusic", masterSlider.value);
     }
     public void EffectsVolume()
     {
+        SaveSound.SonidoEffects(effectsSlder.value);
         effectsMixer.SetFloat("MasterEffecst", effectsSlder.value);
+        
     }
-
 
 
     public void PlayAudio(AudioSource audio)

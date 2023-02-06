@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class CambioScene : MonoBehaviour
 {
-     [SerializeField]public int numerodeEcenas;
+     [SerializeField]public  string Scene;
     public void iniciar(){
 
         //Audio de Muerte por hacer
         //Sounds.instance.PlayAudio(Sounds.instance.dead);
-        
-        SceneManager.LoadScene(numerodeEcenas);
+        CambiarScenne.NivelCarga(Scene);
+        //SceneManager.LoadScene(numerodeEcenas);
     }
 }
     

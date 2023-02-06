@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1e6c5b3df51564eb8d2fa2630b0902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numerodeEcenas: 2
+  Scene: Nivel 02
 --- !u!4 &336681593
 Transform:
   m_ObjectHideFlags: 0
@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1e6c5b3df51564eb8d2fa2630b0902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numerodeEcenas: 1
+  Scene: Nivel 01
 --- !u!4 &820859024
 Transform:
   m_ObjectHideFlags: 0
@@ -1881,7 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1e6c5b3df51564eb8d2fa2630b0902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numerodeEcenas: 1
+  Scene: 
 --- !u!1 &1248232129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2022,7 +2022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1e6c5b3df51564eb8d2fa2630b0902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numerodeEcenas: 1
+  Scene: Nivel 01
 --- !u!4 &1308436105
 Transform:
   m_ObjectHideFlags: 0
