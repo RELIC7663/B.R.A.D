@@ -28,11 +28,11 @@ public class Sounds : MonoBehaviour
         PlayAudio(BGmusic);
         
 
-        masterSlider.minValue=-80;
-        masterSlider.maxValue=0;
+        masterSlider.minValue=-50;
+        masterSlider.maxValue=-5;
 
-        effectsSlder.minValue=-80;
-        effectsSlder.maxValue=0;
+        effectsSlder.minValue=-50;
+        effectsSlder.maxValue=-5;
         
         masterSlider.value= masterVol;
         effectsSlder.value=effectsVol;

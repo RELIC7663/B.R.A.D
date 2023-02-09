@@ -61,12 +61,15 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
     private bool puedeHacerDash = true;
     private bool sePuedeMover = true;
 
+    private Vector3 respawn;
+
 
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         gravedadInicial = rb2d.gravityScale;
+        respawn = transform.position;
     }
     private void Update()
     {
@@ -114,8 +117,8 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
         {
             //detecta si esta encima de los piunchos.. falta colocar la ainicacion de muerte por que recarga la escena 
             //Falta metodo para porder realizar este proceso
-            
-            SceneManager.LoadScene(NumScene);
+            transform.position = respawn;
+            //SceneManager.LoadScene(NumScene);
         }
 
         salto = false;

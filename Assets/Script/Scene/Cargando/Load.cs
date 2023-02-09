@@ -14,14 +14,14 @@ public class Load : MonoBehaviour
         StartCoroutine(IniciarCarga(NivelCarga));
     }
     IEnumerator IniciarCarga(string Nivel){
-        yield return  new WaitForSeconds(5);
+        yield return  new WaitForSeconds(3);
         AsyncOperation Opetarion = SceneManager.LoadSceneAsync(Nivel);
         Opetarion.allowSceneActivation=false;
         while(!Opetarion.isDone)
         {
             
             if(Opetarion.progress>=0.9f){
-                Texto.text="Continuar";
+                Texto.text="Presione cualquier tecla para continuar..";
                 if(Input.anyKey){
                     
                     Opetarion.allowSceneActivation=true;
