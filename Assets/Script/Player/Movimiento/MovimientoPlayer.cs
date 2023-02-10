@@ -103,7 +103,7 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
     private void FixedUpdate()
     {
         enSuelo = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, queEsSuelo);
-        enPinchos = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCajaDaño, 0f, Pinchos);
+        enPinchos = Physics2D.OverlapBox(controladorDaño.position, dimensionesCajaDaño, 0f, Pinchos);
         animator.SetBool("enSuelo", enSuelo);
         enPared = Physics2D.OverlapBox(controladorPared.position, dimensionesCajaPared, 0f, queEsSuelo);
         if (sePuedeMover)
@@ -174,7 +174,7 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(controladorSuelo.position, dimensionesCaja);
-        Gizmos.DrawWireCube(controladorSuelo.position, dimensionesCajaDaño);
+        Gizmos.DrawWireCube(controladorDaño.position, dimensionesCajaDaño);
         Gizmos.DrawWireCube(controladorPared.position, dimensionesCajaPared);
     }
 

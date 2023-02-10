@@ -17,7 +17,7 @@ public class SaveSystem
 
         try
         {
-            //Debug.Log($"Save: {data}{id} -> {data.level}");
+            Debug.Log($"Save: {data}{id} -> {data.ToString()}");
             formatter.Serialize(stream, data);
         }
         catch(System.Exception e) {
@@ -45,6 +45,29 @@ public class SaveSystem
         }
         return path;
     }
+
+    public static UserData LoadData(int id)
+    {
+        string path = Path(id);
+
+        if (File.Exists(path))
+        {
+            FileStream stream = new (path, FileMode.Open);
+            BinaryFormatter formatter = new ();
+
+            UserData data = (UserData)formatter.Deserialize(stream);
+            //Debug.Log($"Load: {data}{id} -> {data.level}");
+            stream.Close();
+
+            return data;
+        }
+        else
+        {
+            Debug.LogError($"Path not found: {path}.");
+            return null;
+        }
+    }
+
     public static void EraseData(int id)
     {
         BinaryFormatter formatter = new();
@@ -114,5 +137,6 @@ public class SaveSystem
                 stream.Close();
             }
         }
+        
     }
 }

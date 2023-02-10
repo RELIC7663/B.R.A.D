@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7614715}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.010999998, y: -0.026, z: 0}
+  m_LocalPosition: {x: -0.035, y: -0.04, z: 0}
   m_LocalScale: {x: 0.09999999, y: 0.09999999, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,7 +44,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1414755108962304321, guid: 05d1390afa9cb57498d9308f0fbef1f0, type: 3}
       propertyPath: m_Name
-      value: Warrior Variant
+      value: Warrior
       objectReference: {fileID: 0}
     - target: {fileID: 1414755108962304323, guid: 05d1390afa9cb57498d9308f0fbef1f0, type: 3}
       propertyPath: m_RootOrder
@@ -112,7 +112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1414755108962304326, guid: 05d1390afa9cb57498d9308f0fbef1f0, type: 3}
       propertyPath: "dimensionesCajaDa\xF1o.y"
-      value: 0.25
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 1414755108962304326, guid: 05d1390afa9cb57498d9308f0fbef1f0, type: 3}
       propertyPath: sueavizadoDeMovimiento
