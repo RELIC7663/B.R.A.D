@@ -3095,5 +3095,9 @@ PrefabInstance:
       propertyPath: masterSlider
       value: 
       objectReference: {fileID: 309753894}
+    - target: {fileID: 2040928975302025333, guid: 2a5eaec6a56a4a24db25a498c56890dc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1971533884a4e8745b1e8185d3167209, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a5eaec6a56a4a24db25a498c56890dc, type: 3}

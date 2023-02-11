@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MostrarNivel : MonoBehaviour
 {
     [SerializeField] public GameObject continuar;
@@ -17,20 +18,22 @@ public class MostrarNivel : MonoBehaviour
 
     public void SeleccionarNivel()
     {
-        
-        int a =PathId.PathIdget();
-        Debug.Log(a);
+
+        int a = PathId.PathIdget();
+        Debug.Log(SaveSystem.LoadData(a).Nivelne());
         if (SaveSystem.LoadData(a).Nivelne() == 1)
         {
-            
             Nivel1.SetActive(true);
-        }else if (SaveSystem.LoadData(a).Nivelne() == 2){
+        }
+        else if (SaveSystem.LoadData(a).Nivelne() == 2)
+        {
             Nivel2.SetActive(true);
         }
+        
         continuar.SetActive(false);
         Seleccionarnivel.SetActive(false);
         Opciones.SetActive(false);
-        
+
         Regresar.SetActive(true);
     }
     public void RegresarMenu()

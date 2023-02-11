@@ -658,6 +658,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1160674886 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 909608746, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+  m_PrefabInstance: {fileID: 6120484682680614611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c1e6c5b3df51564eb8d2fa2630b0902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1317195611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1231,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1962322533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6120484682695723525, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+  m_PrefabInstance: {fileID: 6120484682680614611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684a5abd4363b3849a72891c57f6923b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1992289971
 GameObject:
   m_ObjectHideFlags: 3
@@ -1447,6 +1469,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1962322533}
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1160674886}
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SalirYGuardar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: iniciar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PausaMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CambioScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120484683387273063, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120484683586628448, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
+      propertyPath: m_Text
+      value: Salir y Guardadar
+      objectReference: {fileID: 0}
     - target: {fileID: 6120484683917713056, guid: 18c681d26a002e54da7e600ff4db01bf, type: 3}
       propertyPath: m_Pivot.x
       value: 0

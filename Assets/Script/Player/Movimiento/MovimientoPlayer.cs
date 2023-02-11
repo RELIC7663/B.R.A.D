@@ -8,6 +8,8 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
     // Start is called before the first frame update
     private Rigidbody2D rb2d;
 
+    public int Muertes;
+    public int nivel;
 
     [Header("Movimiento")]
 
@@ -26,12 +28,14 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
     [SerializeField] private float fuerzaDeSalto;
     [SerializeField] private LayerMask queEsSuelo;
     [SerializeField] private LayerMask Pinchos;
+    [SerializeField] private LayerMask PassN;
     [SerializeField] private Transform controladorSuelo;
     [SerializeField] private Transform controladorDaño;
     [SerializeField] private Vector3 dimensionesCaja;
     [SerializeField] private Vector3 dimensionesCajaDaño;
     [SerializeField] private bool enSuelo = false;
     [SerializeField] private bool enPinchos = false;
+    [SerializeField] private bool NPass = false;
     private bool salto = false;
     [Header("Animacion")]
 
@@ -70,6 +74,10 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
         animator = GetComponent<Animator>();
         gravedadInicial = rb2d.gravityScale;
         respawn = transform.position;
+        
+        Muertes = SaveSystem.LoadData(PathId.PathIdget()).Player.Intentos;
+        nivel = SaveSystem.LoadData(PathId.PathIdget()).Player.NeNivel();
+
     }
     private void Update()
     {
@@ -104,6 +112,7 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
     {
         enSuelo = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, queEsSuelo);
         enPinchos = Physics2D.OverlapBox(controladorDaño.position, dimensionesCajaDaño, 0f, Pinchos);
+        NPass = Physics2D.OverlapBox(controladorDaño.position, dimensionesCajaDaño, 0f, PassN);
         animator.SetBool("enSuelo", enSuelo);
         enPared = Physics2D.OverlapBox(controladorPared.position, dimensionesCajaPared, 0f, queEsSuelo);
         if (sePuedeMover)
@@ -117,8 +126,33 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
         {
             //detecta si esta encima de los piunchos.. falta colocar la ainicacion de muerte por que recarga la escena 
             //Falta metodo para porder realizar este proceso
+            
+            Muertes++;
+
+            PathId.Muretes = Muertes;
             transform.position = respawn;
+ 
             //SceneManager.LoadScene(NumScene);
+        }
+        if (NPass)
+        {
+            //xd
+            
+            nivel++;
+            Debug.Log(nivel);
+            PathId.Nivel = nivel;
+            if (nivel==2)
+            {
+                CambiarScenne.NivelCarga("Nivel 02");
+            }else if (nivel==3)
+            {
+                CambiarScenne.NivelCarga("Nivel 01");
+            }else {
+                CambiarScenne.NivelCarga("Menu");
+            }
+
+            
+
         }
 
         salto = false;

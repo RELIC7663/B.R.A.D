@@ -754,7 +754,7 @@ PrefabInstance:
     - target: {fileID: 2040928975302025333, guid: 2a5eaec6a56a4a24db25a498c56890dc, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: af981a165acc5b549a80168a68721f40, type: 3}
+      objectReference: {fileID: 8300000, guid: 172adf70e41b29745af1bbbfc0520fb7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a5eaec6a56a4a24db25a498c56890dc, type: 3}
 --- !u!1 &854230976
@@ -1242,6 +1242,10 @@ PrefabInstance:
     - target: {fileID: 8972598368619992138, guid: a7314217f88a9854e939f072200e51d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972598368619992143, guid: a7314217f88a9854e939f072200e51d7, type: 3}
+      propertyPath: PassN.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8972598368619992143, guid: a7314217f88a9854e939f072200e51d7, type: 3}
       propertyPath: velocidadDash

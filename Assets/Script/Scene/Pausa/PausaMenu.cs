@@ -42,10 +42,10 @@ public class PausaMenu : MonoBehaviour
         isPause = false;
 
     }
-    public void Reiniciar()
+    public void SalirYGuardar()
     {
-
-        
+        //simpre saca  punto = 0;
+        SaveSystem.SaveData(new Jugador (PathId.Muretes,PathId.Nivel,PathId.PathIdget()),PathId.PathIdget(),SaveSystem.LoadData(PathId.PathIdget()).NamePlayer());
 
     }
 
