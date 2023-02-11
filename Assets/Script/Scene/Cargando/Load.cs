@@ -21,8 +21,8 @@ public class Load : MonoBehaviour
         {
             
             if(Opetarion.progress>=0.9f){
-                Texto.text="Presione cualquier tecla para continuar..";
-                if(Input.anyKey){
+                Texto.text="Presione Shift para continuar..";
+                if(Input.GetKeyDown(KeyCode.LeftShift)){
                     
                     Opetarion.allowSceneActivation=true;
                 }

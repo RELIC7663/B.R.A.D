@@ -13,7 +13,7 @@ public class SaveSystem
         string path = Path(id);
 
         FileStream stream = new (path, FileMode.Create);
-        UserData data = new (player, name);
+        UserData data = new (player,id, name);
 
         try
         {
@@ -56,14 +56,16 @@ public class SaveSystem
             BinaryFormatter formatter = new ();
 
             UserData data = (UserData)formatter.Deserialize(stream);
-            //Debug.Log($"Load: {data}{id} -> {data.level}");
+            //Debug.Log($"Load: {data}{id} -> {data}");
             stream.Close();
 
             return data;
         }
         else
         {
-            Debug.LogError($"Path not found: {path}.");
+            
+            
+            //Debug.LogError($"Path not found: {path}.");
             return null;
         }
     }

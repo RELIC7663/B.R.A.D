@@ -36,11 +36,19 @@ public class PausaMenu : MonoBehaviour
     }
     public void Continuar()
     {
+
         Time.timeScale = 1;
         pausemenu.SetActive(false);
         isPause = false;
 
     }
+    public void Reiniciar()
+    {
+
+        
+
+    }
+
 
 }
 

@@ -11,6 +11,7 @@ public class CambioScene : MonoBehaviour
         //Sounds.instance.PlayAudio(Sounds.instance.dead);
         Time.timeScale = 1;
         CambiarScenne.NivelCarga(Scene);
+        
         //SceneManager.LoadScene(numerodeEcenas);
     }
     
