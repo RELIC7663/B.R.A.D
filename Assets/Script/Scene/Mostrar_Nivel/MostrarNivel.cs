@@ -9,6 +9,9 @@ public class MostrarNivel : MonoBehaviour
     [SerializeField] public GameObject Seleccionarnivel;
     [SerializeField] public GameObject Nivel1;
     [SerializeField] public GameObject Nivel2;
+    [SerializeField] public GameObject Nivel3;
+    [SerializeField] public GameObject Nivel4;
+    //[SerializeField] public GameObject[] Niveles;
     [SerializeField] public GameObject Regresar;
 
     [SerializeField] public GameObject Opciones;
@@ -20,15 +23,40 @@ public class MostrarNivel : MonoBehaviour
     {
 
         int a = PathId.PathIdget();
-        Debug.Log(SaveSystem.LoadData(a).Nivelne());
+        //Debug.Log(SaveSystem.LoadData(a).Nivelne());
         if (SaveSystem.LoadData(a).Nivelne() == 1)
         {
             Nivel1.SetActive(true);
+            Nivel2.SetActive(false);
+            Nivel3.SetActive(false);
+            Nivel4.SetActive(false);
+
         }
         else if (SaveSystem.LoadData(a).Nivelne() == 2)
         {
+            Nivel1.SetActive(true);
             Nivel2.SetActive(true);
+            Nivel3.SetActive(false);
+            Nivel4.SetActive(false);
+        }if (SaveSystem.LoadData(a).Nivelne() == 3)
+        {
+            Nivel1.SetActive(true);
+            Nivel2.SetActive(true);
+            Nivel3.SetActive(true);
+            Nivel4.SetActive(false);
         }
+        else if (SaveSystem.LoadData(a).Nivelne() == 4)
+        {
+            Nivel1.SetActive(true);
+            Nivel2.SetActive(true);
+            Nivel3.SetActive(true);
+            Nivel4.SetActive(true);
+        }
+
+        //foreach(GameObject nivel in Niveles)
+        //{
+            //nivel.SetActive(true);
+        //}
         
         continuar.SetActive(false);
         Seleccionarnivel.SetActive(false);
@@ -43,6 +71,8 @@ public class MostrarNivel : MonoBehaviour
         Opciones.SetActive(true);
         Nivel1.SetActive(false);
         Nivel2.SetActive(false);
+        Nivel3.SetActive(false);
+        Nivel4.SetActive(false);
         Regresar.SetActive(false);
 
         CONF.SetActive(false);

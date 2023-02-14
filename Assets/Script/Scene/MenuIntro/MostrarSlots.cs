@@ -36,7 +36,8 @@ public class MostrarSlots : MonoBehaviour
 
     public void IndicarSlots()
     {
-
+        SaveSystem.Check();
+        sUpdate ();
         
 
         Slot1.SetActive(true);
@@ -73,7 +74,7 @@ public class MostrarSlots : MonoBehaviour
     }
     public void Contuniar()
     {
-
+        SaveSystem.Check();
         sUpdate ();
         
 
@@ -88,26 +89,26 @@ public class MostrarSlots : MonoBehaviour
         
         if (SaveSystem.LoadData(0).Nivelne() != 0)
         {
-            TextcontinuarSlot1.text=SaveSystem.LoadData(0).NamePlayer();
+            TextcontinuarSlot1.text=SaveSystem.LoadData(0).NamePlayer()+" Lvl "+SaveSystem.LoadData(0).Nivelne()+" Deads "+SaveSystem.LoadData(0).Player.Intentos;
             continuarSlot1.SetActive(true);
             
         }
         else continuarSlot1.SetActive(false);
         if (SaveSystem.LoadData(1).Nivelne() != 0)
         {
-            TextcontinuarSlot2.text=SaveSystem.LoadData(1).NamePlayer();
+            TextcontinuarSlot2.text=SaveSystem.LoadData(1).NamePlayer()+" Lvl "+SaveSystem.LoadData(1).Nivelne()+" Deads "+SaveSystem.LoadData(1).Player.Intentos;
             continuarSlot2.SetActive(true);
         }
         else continuarSlot2.SetActive(false);
         if (SaveSystem.LoadData(2).Nivelne() != 0)
         {
-            TextcontinuarSlot3.text=SaveSystem.LoadData(2).NamePlayer();
+            TextcontinuarSlot3.text=SaveSystem.LoadData(2).NamePlayer()+" Lvl "+SaveSystem.LoadData(2).Nivelne()+" Deads "+SaveSystem.LoadData(2).Player.Intentos;
             continuarSlot3.SetActive(true);
         }
         else continuarSlot3.SetActive(false);
         if (SaveSystem.LoadData(3).Nivelne() != 0)
         {
-            TextcontinuarSlot4.text=SaveSystem.LoadData(3).NamePlayer();
+            TextcontinuarSlot4.text=SaveSystem.LoadData(3).NamePlayer()+" Lvl "+SaveSystem.LoadData(3).Nivelne()+" Deads "+SaveSystem.LoadData(3).Player.Intentos;
 
             continuarSlot4.SetActive(true);
         }

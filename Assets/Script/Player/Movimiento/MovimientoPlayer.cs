@@ -22,7 +22,6 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
 
     [SerializeField] private int NumScene;
 
-
     [Header("Salto")]
 
     [SerializeField] private float fuerzaDeSalto;
@@ -137,17 +136,27 @@ public class MovimientoPlayer : MonoBehaviour, iMoverse
         if (NPass)
         {
             //xd
-            
+
             nivel++;
             Debug.Log(nivel);
+
+
             PathId.Nivel = nivel;
             if (nivel==2)
             {
+                SaveSystem.SaveData(new Jugador (PathId.Muretes,PathId.Nivel,PathId.PathIdget()),PathId.PathIdget(),SaveSystem.LoadData(PathId.PathIdget()).NamePlayer());
                 CambiarScenne.NivelCarga("Nivel 02");
             }else if (nivel==3)
             {
-                CambiarScenne.NivelCarga("Nivel 01");
-            }else {
+                SaveSystem.SaveData(new Jugador (PathId.Muretes,PathId.Nivel,PathId.PathIdget()),PathId.PathIdget(),SaveSystem.LoadData(PathId.PathIdget()).NamePlayer());
+                CambiarScenne.NivelCarga("Nivel 03");
+            }else if (nivel==4)
+            {
+                SaveSystem.SaveData(new Jugador (PathId.Muretes,PathId.Nivel,PathId.PathIdget()),PathId.PathIdget(),SaveSystem.LoadData(PathId.PathIdget()).NamePlayer());
+                CambiarScenne.NivelCarga("Nivel 04");
+            }
+            else {
+                SaveSystem.SaveData(new Jugador (PathId.Muretes,PathId.Nivel,PathId.PathIdget()),PathId.PathIdget(),SaveSystem.LoadData(PathId.PathIdget()).NamePlayer());
                 CambiarScenne.NivelCarga("Menu");
             }
 
